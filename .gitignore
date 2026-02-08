@@ -6,7 +6,8 @@ __pycache__/
 *$py.class
 
 keys/
+*.json
 
 # Kestra secrets
 .env
-.env_encoded
+.env_encoded 
