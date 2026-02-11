@@ -11,3 +11,10 @@ keys/
 # Kestra secrets
 .env
 .env_encoded 
+
+logs
+data
+dbt_packages
+target
+
+taxi_rides_ny.duckdb
