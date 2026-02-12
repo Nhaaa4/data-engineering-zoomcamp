@@ -34,7 +34,3 @@ renamed as (
 )
 
 select * from renamed
-
-{% if target.name == 'dev' %}
-where pickup_datetime >= '2019-01-01' and pickup_datetime <= '2019-02-01'
-{% endif %}

@@ -51,11 +51,3 @@ left join {{ ref('dim_zones') }} as pz
     on trips.pickup_location_id = pz.location_id
 left join {{ ref('dim_zones') }} as dz
     on trips.dropoff_location_id = dz.location_id
-
-{% if is_incremental() %}
-  -- Only process new trips based on pickup datetime
-  where trips.pickup_datetime > (select max(pickup_datetime) from {{ this }})
-{% elif target.name == 'dev' %}
-  -- Limit data for development to improve performance
-  where trips.pickup_datetime >= '2019-01-01' and trips.pickup_datetime < '2019-01-15'
-{% endif %}
