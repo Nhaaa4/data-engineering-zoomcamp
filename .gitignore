@@ -18,3 +18,7 @@ dbt_packages
 target
 
 taxi_rides_ny.duckdb
+.bruin.yml
+logs/runs
+logs/*.log
+*.py[cod]

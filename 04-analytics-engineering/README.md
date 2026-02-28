@@ -33,7 +33,7 @@ If you run `dbt run --select int_trips_unioned`, what models will be built?
 - `int_trips_unioned`, `int_trips`, and `fct_trips` (downstream dependencies)
 
 ```
-Answer: `stg_green_tripdata`, `stg_yellow_tripdata`, and `int_trips_unioned` (upstream dependencies)
+Answer: `int_trips_unioned` only
 ```
 
 ---
